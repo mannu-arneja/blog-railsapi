@@ -4,7 +4,7 @@ require 'json'
 class Post < ApplicationRecord
 
     def self.fetch_post_data(query)
-        url = "https://***REMOVED***.io/api/assessment/blog/posts?tag=#{query}"
+        url = "https://DOMAIN.COM/blog/posts?tag=#{query}"
         response = open(url).read
         JSON.parse(response)
     end
